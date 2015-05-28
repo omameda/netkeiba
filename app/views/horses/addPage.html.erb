@@ -1,0 +1,8 @@
+<h1>競走馬の追加</h1>
+<%= form_tag horses_path do %>
+  <div class="field">
+    <%= label :post, "Horse URL" %>
+    <%= text_field :post, :url %>  
+  </div>
+  <%= submit_tag "Get Horse Data" %>
+<% end %>

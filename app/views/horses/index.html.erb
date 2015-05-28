@@ -1,0 +1,20 @@
+<h1>競馬データベース</h1>
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th>name</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @horses.each do |horse| %>
+      <tr>
+        <td><%= link_to(horse.name, horse) %></td>
+        <td><%= link_to("WEB", "http://db.netkeiba.com/horse/#{horse.horse_id}") %></td>
+        <td><%= link_to("Destroy", method: :delete , data: { confirm: 'Are you sure? '} ) %></td>
+        <td><%= link_to("csv ", params.merge(format: :csv)) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

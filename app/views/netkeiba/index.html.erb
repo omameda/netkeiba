@@ -1,0 +1,13 @@
+<h1>競馬予想</h1>
+
+<%= form_tag netkeiba_predict_path do %>
+  <% for i in 1..18 %>
+    <div class="field">
+      <%= label :horses, "Please input horse id in Lane #{i}" %>
+      <%= text_field_tag 'horses[]' %>
+    </div>
+  <% end %>
+  <%= submit_tag "Predict" %>
+<% end %>
+
+<h2> サイトURLで自動化したい（レースID） </h2>

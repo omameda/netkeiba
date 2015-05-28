@@ -1,0 +1,7 @@
+<h1>予想結果</h1>
+<% i = 0 %>
+<% !@ranking.empty? && @ranking.each do |horse| %>
+  <h2><%= "第#{i}位　　　" %><%= link_to(horse.name , horse ) %>　</h2>
+<% end %>
+
+<%= link_to("back", root_path ) %>
